@@ -11488,6 +11488,6 @@ tree-builder .item-wrapper.closed .content,
 }
 
 /* MY CUSTOM CSS */
-.header_wrapper {
-   background-color: red;
+.filterBox {
+   color: lightgrey;
 }
