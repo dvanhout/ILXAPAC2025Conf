@@ -11488,6 +11488,6 @@ tree-builder .item-wrapper.closed .content,
 }
 
 /* MY CUSTOM CSS */
-.filterBox::placeholder {
-   color: lightgrey;
+.title-container .text {
+   color: DarkGreen;
 }
