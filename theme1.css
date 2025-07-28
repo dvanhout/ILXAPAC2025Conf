@@ -11489,5 +11489,5 @@ tree-builder .item-wrapper.closed .content,
 
 /* MY CUSTOM CSS */
 .title-container .text {
-   color: DarkGreen;
+   color: DarkGreen !important;
 }
