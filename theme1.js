@@ -1,7 +1,7 @@
 (() => {
    "use strict";
    document.addEventListener("DOMContentLoaded", (function () {
-      console.log("Hi from dv");
+      console.log("Mode:", Intelex.DetailPage.getProperties().mode);
       function e() {
          document.querySelectorAll(".filter_cell .select2-container--open.select2-container-focusborder").forEach((e => {
             setTimeout((() => {
