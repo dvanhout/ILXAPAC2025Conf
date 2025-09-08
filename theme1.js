@@ -3,20 +3,27 @@
 
    
    // Dv Testing --------
-   function onIntelexReady(callback) {
+   function waitForMode(callback) {
       const check = () => {
-         if (window.Intelex?.DetailPage?.getProperties) {
-            callback();
-         } else {
-            setTimeout(check, 100);
+         try {
+            if (window.Intelex?.DetailPage?.getProperties) {
+               const props = Intelex.DetailPage.getProperties();
+               if (props && props.mode) {
+                  callback(props.mode);
+                  return;
+               }
+            }
+         } catch (e) {
+            // ignore errors until ready
          }
+         setTimeout(check, 200);
       };
       check();
    }
 
-
-   onIntelexReady(() => {
-      console.log("Mode is:", Intelex.DetailPage.getProperties().mode);
+   waitForMode((mode) => {
+      console.log("Mode is finally ready:", mode);
+      // put your code here
    });
 
    // END Dv Testing -------
