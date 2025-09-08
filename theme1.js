@@ -16,7 +16,7 @@
 
 
    onIntelexReady(() => {
-      console.log("Mode:", Intelex.DetailPage.getProperties().mode);
+      console.log("Mode is:", Intelex.DetailPage.getProperties().mode);
    });
 
    // END Dv Testing -------
