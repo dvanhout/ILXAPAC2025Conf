@@ -1,7 +1,34 @@
 (() => {
    "use strict";
-   document.addEventListener("DOMContentLoaded", (function () {
+
+   
+   // Dv Testing --------
+   function onIntelexReady(callback) {
+      const check = () => {
+         if (window.Intelex?.DetailPage?.getProperties) {
+            callback();
+         } else {
+            setTimeout(check, 100);
+         }
+      };
+      check();
+   }
+
+
+   onIntelexReady(() => {
       console.log("Mode:", Intelex.DetailPage.getProperties().mode);
+   });
+
+   // END Dv Testing -------
+
+
+   
+   onIntelexReady(() => {
+      console.log("Mode:", Intelex.DetailPage.getProperties().mode);
+      // your code here...
+   });
+   
+   document.addEventListener("DOMContentLoaded", (function () {
       function e() {
          document.querySelectorAll(".filter_cell .select2-container--open.select2-container-focusborder").forEach((e => {
             setTimeout((() => {
