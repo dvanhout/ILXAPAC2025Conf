@@ -23,11 +23,6 @@
 
 
    
-   onIntelexReady(() => {
-      console.log("Mode:", Intelex.DetailPage.getProperties().mode);
-      // your code here...
-   });
-   
    document.addEventListener("DOMContentLoaded", (function () {
       function e() {
          document.querySelectorAll(".filter_cell .select2-container--open.select2-container-focusborder").forEach((e => {
