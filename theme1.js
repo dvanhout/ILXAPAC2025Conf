@@ -1,6 +1,7 @@
 (() => {
    "use strict";
    document.addEventListener("DOMContentLoaded", (function () {
+      console.log("Hi from dv");
       function e() {
          document.querySelectorAll(".filter_cell .select2-container--open.select2-container-focusborder").forEach((e => {
             setTimeout((() => {
