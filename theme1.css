@@ -1,4 +1,4 @@
 textarea {
    resize: both;
-   width: 75%;
+   width: 75% !important;
 }
